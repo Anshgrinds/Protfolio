@@ -336,7 +336,7 @@ function initLightbox() {
 function initEmailCopy() {
   const copyBtn = document.getElementById('copy-email-btn');
   const toast = document.getElementById('toast');
-  const emailStr = 'retired1234321@gmail.com';
+  const emailStr = 'anshgrind@gmail.com';
   if (!copyBtn) return;
 
   copyBtn.addEventListener('click', () => {
