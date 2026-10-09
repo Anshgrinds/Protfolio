@@ -1,62 +1,631 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>html { scroll-behavior: smooth; }</style>
-     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ansh | Designer & Developer</title>
-     <link rel="stylesheet" href="style.css">
-     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansh Jha | Creative Technologist & Multidisciplinary Developer</title>
+  <meta name="description" content="Portfolio of Ansh Jha - Graphic & Brand Designer, Web Developer, 3D Blender Artist, C++ Robotics and Game Systems Creator.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Dynamic Interactive Particle Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation Header -->
   <header>
-    <nav>
-      <h1>Ansh Jha</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <section class="hero">
-      <img src="Profile.jpeg" alt="Profile">
-      <h2>Hello, I'm <span>Ansh</span></h2>
-      <p>Logo Designer & Web Developer</p>
-    </section>
+    <div class="container">
+      <nav>
+        <a href="#home" class="brand">
+          <img src="logo1.png" alt="Ansh Logo" class="brand-logo">
+          <span class="brand-name">Ansh Jha</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#blender-showcase">3D Worlds</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://www.fiverr.com/s/qD77kgV" target="_blank" rel="noopener" class="nav-cta">Fiverr Services</a></li>
+        </ul>
+
+        <button class="mobile-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am passionate about creating Professional logos and clean web designs that reflect individuality and purpose.</p>
-  </section>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            Available for Freelance & Custom Builds
+          </div>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Logo Design</li>
-      <li>HTML & CSS</li>
-      <li>JavaScript Basics</li>
-      <li>UI Design</li>
-    </ul>
-  </section>
+          <h1 class="hero-title">
+            Crafting Visual Worlds & <br>
+            <span class="gradient-text">Engineered Digital Systems</span>
+          </h1>
 
-  <section id="portfolio">
-    <h2>My Work</h2>
-    <div class="portfolio-item">
-      <img src="WhatsApp Image 2026-02-10 at 2.50.57 PM.jpeg" width="1048" height="1048" alt="">
+          <div class="role-typing-wrapper">
+            <span class="role-prefix">&gt;</span>
+            <span id="typed-role">Brand & Logo Designer</span>
+          </div>
+
+          <p class="hero-desc">
+            Bridging high-impact graphic design, full-stack web engineering, immersive 3D Blender environments, and low-level C++ robotics. Every build is 100% bespoke, crafted with intention and obsessive attention to detail.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Explore Portfolio
+            </a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <a href="https://www.fiverr.com/s/qD77kgV" target="_blank" rel="noopener" class="btn btn-fiverr">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.25 16.25v-3.87c0-1.07-.6-1.63-1.57-1.63-.82 0-1.46.54-1.78 1.25v4.25h-2.9v-7.5h2.9v1.12c.62-.84 1.63-1.32 2.76-1.32 2.08 0 3.49 1.34 3.49 3.73v3.97h-2.9zm-9.35 0h-2.9v-7.5h2.9v7.5zm-1.45-8.55c-.93 0-1.68-.75-1.68-1.68 0-.93.75-1.68 1.68-1.68.93 0 1.68.75 1.68 1.68 0 .93-.75 1.68-1.68 1.68z"/></svg>
+              Fiverr Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Avatar Card -->
+        <div class="hero-visual">
+          <div class="avatar-card tilt-card">
+            <div class="avatar-img-wrapper">
+              <img src="Profile.jpeg" alt="Ansh Jha Portrait">
+              <div class="floating-badge">Verified Creator</div>
+            </div>
+            <div class="avatar-info">
+              <h2 class="avatar-name">Ansh Jha</h2>
+              <p class="avatar-role">Creative Technologist • Designer • C++ & Web Developer</p>
+              <div class="avatar-chips">
+                <span class="chip">Photoshop</span>
+                <span class="chip">Blender 5.2</span>
+                <span class="chip">Web Dev</span>
+                <span class="chip">C++20</span>
+                <span class="chip">Unreal Engine</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>📧 Email: retired1234321@gmail.com</p>
-    <p>🌐 Fiverr: <a href="https://www.fiverr.com/s/qD77kgV">Fiverr></p>
+  <!-- Metrics / Highlights Bar -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-number">5+</div>
+          <div class="metric-label">Core Creative Disciplines</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-number">10+</div>
+          <div class="metric-label">Bespoke Projects Built</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-number">100%</div>
+          <div class="metric-label">Handcrafted (No Templates)</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-number">60fps</div>
+          <div class="metric-label">Fluid Responsive Engines</div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- Interactive 3D Showcase (Comparison Slider) -->
+  <section id="blender-showcase" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive 3D Art</span>
+        <h2 class="section-title">Blender Environment & World Building</h2>
+        <p class="section-subtitle">
+          From geometry blocking to atmospheric Cycles lighting. Drag the interactive divider to explore the floating island scene raw viewport wireframe vs final raytraced render.
+        </p>
+      </div>
+
+      <div class="feature-showcase">
+        <div class="feature-grid">
+          <div class="comparison-container" title="Drag to compare Cycles Render vs Viewport Wireframe">
+            <!-- Base: Viewport Wireframe -->
+            <div class="comparison-base">
+              <img src="assets/blender/island_viewport.jpg" alt="Blender Floating Island Viewport Wireframe">
+              <span class="comparison-label label-right">Viewport Scene</span>
+            </div>
+            <!-- Overlay: Final Cycles Render -->
+            <div class="comparison-overlay">
+              <img src="assets/blender/island_render.jpg" alt="Blender Floating Island Cycles Render">
+              <span class="comparison-label label-left">Cycles Render</span>
+            </div>
+            <!-- Divider Handle -->
+            <div class="comparison-slider">
+              <svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5V7zm8 0v10l5-5-5-5z"/></svg>
+            </div>
+          </div>
+
+          <div class="comparison-info">
+            <div class="tech-tag-row">
+              <span class="badge">Blender 5.2</span>
+              <span class="badge">Cycles Raytracing</span>
+              <span class="badge badge-purple">Environment Art</span>
+            </div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700;">
+              Stylized Floating Archipelago
+            </h3>
+            <p style="color: var(--text-muted); line-height: 1.65; font-size: 0.95rem;">
+              Custom modeled terrain mass with organic rock stratification, procedural foliage clustering, dynamic daylight atmosphere, and soft particle haze. Rendered natively in Cycles with micro-displacement and custom subsurface scattering.
+            </p>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+              <button class="btn btn-secondary" data-lightbox data-lightbox-src="assets/blender/island_render.png" data-lightbox-title="Floating Island - High-Res Cycles Render" data-lightbox-desc="Full resolution raytraced lighting pass in Blender 5.2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                Zoom Full Res Render
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Disciplinary Portfolio Grid -->
+  <section id="projects" class="section" style="background: linear-gradient(180deg, transparent 0%, rgba(13, 18, 31, 0.5) 100%);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Selected Works</span>
+        <h2 class="section-title">Multi-Disciplinary Portfolio</h2>
+        <p class="section-subtitle">
+          Filter through real client branding, full-stack web platforms, 3D art, C++ robotics telemetry, and Unreal game mechanics.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="design">🎨 Brand & Photoshop</button>
+        <button class="filter-btn" data-filter="web">🌐 Web Development</button>
+        <button class="filter-btn" data-filter="3d">🧊 3D & Blender</button>
+        <button class="filter-btn" data-filter="robotics">🤖 Robotics & C++</button>
+        <button class="filter-btn" data-filter="games">🎮 Game Systems</button>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="projects-grid">
+
+        <!-- 1. Photoshop: Education Consultancy Suite -->
+        <article class="project-card tilt-card" data-category="design">
+          <div class="project-thumb">
+            <img src="assets/photoshop/4.jpeg" alt="Education Consultancy Brand Identity">
+            <div class="project-thumb-overlay">
+              <button class="btn btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;" data-lightbox data-lightbox-src="assets/photoshop/4.jpeg" data-lightbox-title="Professional Education Consultancy Campaign" data-lightbox-desc="Comprehensive identity, typography balance, and visual direction.">
+                View Full Art
+              </button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Brand Identity • Photoshop</div>
+            <h3 class="project-title">Professional Education Consultancy Campaign</h3>
+            <p class="project-desc">
+              High-converting visual marketing creative crafted in Photoshop. Engineered with sharp typographic hierarchy, balanced contrast, and custom color grading.
+            </p>
+            <div class="project-tags">
+              <span class="chip">Adobe Photoshop</span>
+              <span class="chip">Brand Design</span>
+              <span class="chip">Typography</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-lightbox data-lightbox-src="assets/photoshop/4.jpeg" data-lightbox-title="Professional Education Consultancy Campaign">
+                Inspect Artwork &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Photoshop: Acharya Pith Preschool Admission Poster -->
+        <article class="project-card tilt-card" data-category="design">
+          <div class="project-thumb">
+            <img src="assets/photoshop/admission_poster_preview.jpg" alt="Acharya Pith Admission Poster">
+            <div class="project-thumb-overlay">
+              <button class="btn btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;" data-lightbox data-lightbox-src="assets/photoshop/admission_poster.jpg" data-lightbox-title="Acharya Pith Preschool Admission Master Poster" data-lightbox-desc="High-resolution 300DPI commercial print poster created via custom Photoshop pipelines.">
+                Inspect High-Res Poster
+              </button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Commercial Print • Photoshop</div>
+            <h3 class="project-title">Acharya Pith Preschool Admission Poster</h3>
+            <p class="project-desc">
+              Commercial-grade 300DPI admission campaign poster with layered compositing, masked framing, vibrant playful color palettes, and print-ready typography.
+            </p>
+            <div class="project-tags">
+              <span class="chip">Photoshop 2026</span>
+              <span class="chip">300 DPI Print</span>
+              <span class="chip">Visual Layout</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-lightbox data-lightbox-src="assets/photoshop/admission_poster.jpg" data-lightbox-title="Acharya Pith Preschool Admission Poster">
+                View Print Artwork &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Photoshop: Brand Mark & Visual Artifacts -->
+        <article class="project-card tilt-card" data-category="design">
+          <div class="project-thumb">
+            <img src="assets/photoshop/1_cropped.jpeg" alt="Graphic Identity & Logo Artifacts">
+            <div class="project-thumb-overlay">
+              <button class="btn btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;" data-lightbox data-lightbox-src="assets/photoshop/1_cropped.jpeg" data-lightbox-title="Visual Identity & Logo Artifact" data-lightbox-desc="Clean cropped vector-style emblem and modern brand layout.">
+                Inspect Logo
+              </button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Logo & Vector Art</div>
+            <h3 class="project-title">Precision Graphic Identity & Logo Artifacts</h3>
+            <p class="project-desc">
+              Distinctive, scalable brand emblems designed for modern digital presence. Focused on optical balance, timeless geometry, and instant brand recognition.
+            </p>
+            <div class="project-tags">
+              <span class="chip">Logo Design</span>
+              <span class="chip">Vector Alignment</span>
+              <span class="chip">Brand Assets</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link" data-lightbox data-lightbox-src="assets/photoshop/1_cropped.jpeg" data-lightbox-title="Graphic Identity & Logo Artifact">
+                View Mark Details &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Web Dev: School Management & Admissions Portal -->
+        <article class="project-card tilt-card" data-category="web">
+          <div class="project-thumb" style="background: radial-gradient(circle, #1a2744 0%, #07090e 100%); display: flex; align-items: center; justify-content: center;">
+            <div style="text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-mono); font-size: 2.2rem; color: var(--accent-cyan);">🏫</span>
+              <h4 style="font-family: var(--font-heading); color: #fff; margin-top: 0.5rem; font-size: 1.1rem;">Schools Portal</h4>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Full-Stack Web App</div>
+            <h3 class="project-title">School Admissions & Management Portal</h3>
+            <p class="project-desc">
+              Complete educational web platform featuring responsive admission enquiry workflows, interactive tour booking forms, REST backend handlers, and dynamic scheduling.
+            </p>
+            <div class="project-tags">
+              <span class="chip">HTML5 / Modern CSS</span>
+              <span class="chip">JavaScript ES6</span>
+              <span class="chip">Node.js Server</span>
+              <span class="chip">JSON Storage</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size: 0.8rem; color: var(--text-dim); font-family: var(--font-mono);">Webdesign-Anshcodes #01</span>
+              <span class="chip" style="color: var(--accent-emerald);">Active Pipeline</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Web Dev: Bhangaha Regional Platform -->
+        <article class="project-card tilt-card" data-category="web">
+          <div class="project-thumb" style="background: radial-gradient(circle, #251838 0%, #07090e 100%); display: flex; align-items: center; justify-content: center;">
+            <div style="text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-mono); font-size: 2.2rem; color: #c084fc;">🏛️</span>
+              <h4 style="font-family: var(--font-heading); color: #fff; margin-top: 0.5rem; font-size: 1.1rem;">Bhangaha Portal</h4>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Front-End Architecture</div>
+            <h3 class="project-title">Bhangaha Heritage & Municipality Platform</h3>
+            <p class="project-desc">
+              Cultural and community web presence designed with fluid typography, responsive layout grids, bilingual typography accommodation, and accessible structure.
+            </p>
+            <div class="project-tags">
+              <span class="chip">Responsive Web</span>
+              <span class="chip">UI/UX Styling</span>
+              <span class="chip">Custom Interactions</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size: 0.8rem; color: var(--text-dim); font-family: var(--font-mono);">Webdesign-Anshcodes #02</span>
+              <span class="chip" style="color: var(--accent-cyan);">Live Architecture</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. 3D & Blender: Floating Archipelago Scene -->
+        <article class="project-card tilt-card" data-category="3d">
+          <div class="project-thumb">
+            <img src="assets/blender/island_render.jpg" alt="Blender 3D Floating Island">
+            <div class="project-thumb-overlay">
+              <button class="btn btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;" data-lightbox data-lightbox-src="assets/blender/island_render.png" data-lightbox-title="3D Floating Island Island Scene" data-lightbox-desc="Rendered with Blender Cycles with custom terrain shading and atmospheric scattering.">
+                Inspect 3D Render
+              </button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">3D Environment • Blender</div>
+            <h3 class="project-title">Stylized Floating Island Archipelago</h3>
+            <p class="project-desc">
+              Fully customized 3D environment scene created from scratch. High-poly rock sculpts, stylized vegetation, volumetric fog simulation, and cinematic camera staging.
+            </p>
+            <div class="project-tags">
+              <span class="chip">Blender 5.2</span>
+              <span class="chip">Cycles Engine</span>
+              <span class="chip">Lighting & Shading</span>
+            </div>
+            <div class="project-footer">
+              <a href="#blender-showcase" class="project-link">
+                Compare in Interactive Slider &uarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Robotics & C++: Sensor Telemetry Engine -->
+        <article class="project-card tilt-card" data-category="robotics">
+          <div class="project-thumb" style="background: radial-gradient(circle, #0e2a27 0%, #07090e 100%); display: flex; align-items: center; justify-content: center;">
+            <div style="text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-mono); font-size: 2.2rem; color: var(--accent-emerald);">⚙️</span>
+              <h4 style="font-family: var(--font-heading); color: #fff; margin-top: 0.5rem; font-size: 1.1rem;">C++ Robotics Engine</h4>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Low-Level Systems • C++20</div>
+            <h3 class="project-title">Real-Time Sensor Telemetry & Processing Loops</h3>
+            <p class="project-desc">
+              High-performance C++20 robotics module featuring hardware telemetry loops, sensor signal normalization, real-time safety thresholds, and Arduino VOC sensor integration.
+            </p>
+            <div class="project-tags">
+              <span class="chip">C++20</span>
+              <span class="chip">Sensor Telemetry</span>
+              <span class="chip">Arduino Hardware</span>
+              <span class="chip">Zero-Copy IO</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size: 0.8rem; color: var(--text-dim); font-family: var(--font-mono);">cpp_robotics</span>
+              <span class="chip" style="color: var(--accent-emerald);">Hardware Verified</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. Games: Unreal Engine 5 Character Locomotion -->
+        <article class="project-card tilt-card" data-category="games">
+          <div class="project-thumb" style="background: radial-gradient(circle, #2d1810 0%, #07090e 100%); display: flex; align-items: center; justify-content: center;">
+            <div style="text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-mono); font-size: 2.2rem; color: #ff9f43;">🎮</span>
+              <h4 style="font-family: var(--font-heading); color: #fff; margin-top: 0.5rem; font-size: 1.1rem;">Unreal Engine 5</h4>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Game Mechanics • UE5</div>
+            <h3 class="project-title">Tactical Third-Person Combat & Locomotion</h3>
+            <p class="project-desc">
+              Unreal Engine 5 implementation of responsive 8-way directional movement blendspaces, aim-down-sights (ADS) state transitions, combat firing montages, and jump recovery.
+            </p>
+            <div class="project-tags">
+              <span class="chip">Unreal Engine 5</span>
+              <span class="chip">Animation Montages</span>
+              <span class="chip">State Machines</span>
+              <span class="chip">Locomotion</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size: 0.8rem; color: var(--text-dim); font-family: var(--font-mono);">UEIntroProject</span>
+              <span class="chip" style="color: #ff9f43;">Engine Build</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Technical Arsenal -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Arsenal</span>
+        <h2 class="section-title">Skills & Creative Capabilities</h2>
+        <p class="section-subtitle">
+          Versatility is strength. Here is the toolset I leverage to engineer end-to-end creative solutions.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Category 1: Design & Brand -->
+        <div class="skill-category-card">
+          <div class="skill-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+          </div>
+          <h3 class="skill-cat-title">Graphic & Brand Design</h3>
+          <ul class="skill-items">
+            <li class="skill-item"><span>Adobe Photoshop</span> <span class="skill-level-badge">Advanced</span></li>
+            <li class="skill-item"><span>Logo & Brand Identity</span> <span class="skill-level-badge">Mastery</span></li>
+            <li class="skill-item"><span>Typography & Layouts</span> <span class="skill-level-badge">Advanced</span></li>
+            <li class="skill-item"><span>Commercial Print (300DPI)</span> <span class="skill-level-badge">Skilled</span></li>
+            <li class="skill-item"><span>Photo Retouch & Grading</span> <span class="skill-level-badge">Advanced</span></li>
+          </ul>
+        </div>
+
+        <!-- Category 2: Web Engineering -->
+        <div class="skill-category-card">
+          <div class="skill-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <h3 class="skill-cat-title">Web Engineering</h3>
+          <ul class="skill-items">
+            <li class="skill-item"><span>HTML5 / Semantic Web</span> <span class="skill-level-badge">Mastery</span></li>
+            <li class="skill-item"><span>CSS3 Grid & Flexbox</span> <span class="skill-level-badge">Mastery</span></li>
+            <li class="skill-item"><span>JavaScript (ES6+)</span> <span class="skill-level-badge">Advanced</span></li>
+            <li class="skill-item"><span>Node.js & Express</span> <span class="skill-level-badge">Skilled</span></li>
+            <li class="skill-item"><span>Responsive Architecture</span> <span class="skill-level-badge">Advanced</span></li>
+          </ul>
+        </div>
+
+        <!-- Category 3: 3D & Game Engines -->
+        <div class="skill-category-card">
+          <div class="skill-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3 class="skill-cat-title">3D & Game Systems</h3>
+          <ul class="skill-items">
+            <li class="skill-item"><span>Blender 5.2 (Cycles/EEVEE)</span> <span class="skill-level-badge">Skilled</span></li>
+            <li class="skill-item"><span>3D Environment Art</span> <span class="skill-level-badge">Skilled</span></li>
+            <li class="skill-item"><span>Unreal Engine 5 (UE5)</span> <span class="skill-level-badge">Intermediate</span></li>
+            <li class="skill-item"><span>Locomotion & Blendspaces</span> <span class="skill-level-badge">Skilled</span></li>
+            <li class="skill-item"><span>Material & Shader Nodes</span> <span class="skill-level-badge">Intermediate</span></li>
+          </ul>
+        </div>
+
+        <!-- Category 4: Robotics & Systems -->
+        <div class="skill-category-card">
+          <div class="skill-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </div>
+          <h3 class="skill-cat-title">Robotics & Systems</h3>
+          <ul class="skill-items">
+            <li class="skill-item"><span>Modern C++ (C++20)</span> <span class="skill-level-badge">Intermediate</span></li>
+            <li class="skill-item"><span>Sensor Telemetry Loops</span> <span class="skill-level-badge">Skilled</span></li>
+            <li class="skill-item"><span>Arduino & Microcontrollers</span> <span class="skill-level-badge">Skilled</span></li>
+            <li class="skill-item"><span>PowerShell & Automation</span> <span class="skill-level-badge">Advanced</span></li>
+            <li class="skill-item"><span>Git & Version Control</span> <span class="skill-level-badge">Skilled</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me & Craftsmanship Philosophy -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-box">
+        <div class="about-text">
+          <span class="section-tag">Craftsmanship</span>
+          <h3>Multi-Disciplinary by Design, Grounded in Real Execution.</h3>
+          <p>
+            I am Ansh Jha, a multidisciplinary designer and builder. In an era saturated with cookie-cutter web generators and generic AI output, I focus on authentic visual storytelling and rock-solid code structure.
+          </p>
+          <p>
+            Whether I'm tailoring a high-converting brand identity for a client on Fiverr, optimizing a web application's user experience, rendering a stylized archipelago in Blender, or programming sensor loops in C++, my goal remains the same: <strong>craft work that feels alive, intentional, and unmistakably human.</strong>
+          </p>
+        </div>
+
+        <div class="about-pillars">
+          <div class="pillar-item">
+            <div class="pillar-num">01</div>
+            <div class="pillar-content">
+              <h4>Design Meets Logic</h4>
+              <p>Visual appeal is meaningless without strong technical foundations. I bridge aesthetic finesse with engineered durability.</p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-num">02</div>
+            <div class="pillar-content">
+              <h4>No Generic Boilerplate</h4>
+              <p>Every asset, color palette, responsive layout, and interaction is customized for the exact mission at hand.</p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-num">03</div>
+            <div class="pillar-content">
+              <h4>Fluid Across Mediums</h4>
+              <p>From 2D graphic posters and web browser canvases to 3D worlds and hardware robotics sensors, I adapt rapidly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Collaboration Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-card">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="contact-title">Have a Project or Idea in Mind?</h2>
+        <p class="contact-desc">
+          Whether you need a custom brand identity, a fast modern website, a 3D asset, or freelance collaboration, my inbox is always open.
+        </p>
+
+        <div class="contact-methods">
+          <div class="email-copy-wrapper">
+            <span>retired1234321@gmail.com</span>
+            <button class="copy-btn" id="copy-email-btn" title="Copy Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+          </div>
+
+          <a href="mailto:retired1234321@gmail.com" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Send Direct Email
+          </a>
+
+          <a href="https://www.fiverr.com/s/qD77kgV" target="_blank" rel="noopener" class="btn btn-fiverr">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.25 16.25v-3.87c0-1.07-.6-1.63-1.57-1.63-.82 0-1.46.54-1.78 1.25v4.25h-2.9v-7.5h2.9v1.12c.62-.84 1.63-1.32 2.76-1.32 2.08 0 3.49 1.34 3.49 3.73v3.97h-2.9zm-9.35 0h-2.9v-7.5h2.9v7.5zm-1.45-8.55c-.93 0-1.68-.75-1.68-1.68 0-.93.75-1.68 1.68-1.68.93 0 1.68.75 1.68 1.68 0 .93-.75 1.68-1.68 1.68z"/></svg>
+            Hire on Fiverr
+          </a>
+
+          <a href="https://github.com/Anshgrinds" target="_blank" rel="noopener" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Ansh Jha. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <p>© 2026 Ansh Jha. All rights reserved. Designed & Engineered with precision.</p>
+        </div>
+        <div class="footer-right">
+          <a href="#home" class="footer-link">Back to Top ↑</a>
+          <a href="https://github.com/Anshgrinds" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+          <a href="https://www.fiverr.com/s/qD77kgV" target="_blank" rel="noopener" class="footer-link">Fiverr</a>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Lightbox Modal for Full Detail View -->
+  <div id="lightbox-modal">
+    <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-image" src="" alt="Full Artwork Preview">
+      <div class="lightbox-caption">
+        <h4 id="lightbox-title"></h4>
+        <p id="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast">Copied to clipboard!</div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
-
