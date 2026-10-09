@@ -17,6 +17,9 @@
 </head>
 <body>
 
+  <!-- Scroll Progress Indicator (UI/UX Pro Max) -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
   <!-- Dynamic Interactive Particle Canvas -->
   <canvas id="bg-canvas"></canvas>
 
@@ -197,14 +200,14 @@
         </p>
       </div>
 
-      <!-- Category Filter Tabs -->
-      <div class="filter-tabs">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="design">🎨 Brand & Photoshop</button>
-        <button class="filter-btn" data-filter="web">🌐 Web Development</button>
-        <button class="filter-btn" data-filter="3d">🧊 3D & Blender</button>
-        <button class="filter-btn" data-filter="robotics">🤖 Robotics & C++</button>
-        <button class="filter-btn" data-filter="games">🎮 Game Systems</button>
+      <!-- Category Filter Tabs (UI/UX Pro Max Quantitative Badges) -->
+      <div class="filter-tabs" role="tablist" aria-label="Portfolio Categories">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects <span class="filter-count">8</span></button>
+        <button class="filter-btn" data-filter="design" role="tab" aria-selected="false">🎨 Brand & Photoshop <span class="filter-count">3</span></button>
+        <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">🌐 Web Dev <span class="filter-count">2</span></button>
+        <button class="filter-btn" data-filter="3d" role="tab" aria-selected="false">🧊 3D & Blender <span class="filter-count">1</span></button>
+        <button class="filter-btn" data-filter="robotics" role="tab" aria-selected="false">🤖 Robotics <span class="filter-count">1</span></button>
+        <button class="filter-btn" data-filter="games" role="tab" aria-selected="false">🎮 Games <span class="filter-count">1</span></button>
       </div>
 
       <!-- Project Cards Grid -->

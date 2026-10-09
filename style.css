@@ -90,6 +90,25 @@ body {
   background: var(--accent-cyan);
 }
 
+/* Scroll Progress Bar (UI/UX Pro Max) */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue), var(--accent-violet));
+  z-index: 1000;
+  transition: width 0.08s linear;
+  box-shadow: 0 0 12px var(--accent-cyan);
+}
+
+/* Accessibility Focus Ring (WCAG 2.1 AA) */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
 /* Utility Containers */
 .container {
   width: 100%;
@@ -166,7 +185,8 @@ nav {
   padding: 0.25rem 0;
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover,
+.nav-links li a.active-link {
   color: var(--accent-cyan);
 }
 
@@ -181,7 +201,8 @@ nav {
   transition: width 0.3s ease;
 }
 
-.nav-links li a:hover::after {
+.nav-links li a:hover::after,
+.nav-links li a.active-link::after {
   width: 100%;
 }
 
@@ -748,6 +769,29 @@ nav {
   color: #07090e;
   border-color: transparent;
   box-shadow: 0 0 18px rgba(0, 242, 254, 0.3);
+}
+
+.filter-count {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.1rem 0.5rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  margin-left: 0.35rem;
+  transition: var(--transition);
+}
+
+.filter-btn:hover .filter-count {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.filter-btn.active .filter-count {
+  background: rgba(7, 9, 14, 0.25);
+  color: #07090e;
 }
 
 /* Projects Grid */
@@ -1339,5 +1383,30 @@ footer {
   .email-copy-wrapper {
     width: 100%;
     justify-content: space-between;
+  }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY & MOTION PREFERENCES (UI/UX Pro Max WCAG Criterion)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  #bg-canvas {
+    display: none !important;
+  }
+
+  .status-dot {
+    animation: none !important;
+  }
+
+  #typed-role {
+    animation: none !important;
+    border-right: none !important;
   }
 }

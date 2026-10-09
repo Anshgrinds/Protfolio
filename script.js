@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 9. Smooth Scroll for Nav Links
   initSmoothScroll();
+
+  // 10. Scroll Progress Bar (UI/UX Pro Max)
+  initScrollProgress();
+
+  // 11. ScrollSpy for Active Navigation (UI/UX Pro Max)
+  initScrollSpy();
 });
 
 /* ========================================================
@@ -429,4 +435,49 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+/* ========================================================
+   10. Scroll Progress Bar (UI/UX Pro Max)
+======================================================== */
+function initScrollProgress() {
+  const progressBar = document.getElementById('scroll-progress');
+  if (!progressBar) return;
+
+  window.addEventListener('scroll', () => {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (totalHeight <= 0) return;
+    const progress = (window.scrollY / totalHeight) * 100;
+    progressBar.style.width = `${progress}%`;
+  }, { passive: true });
+}
+
+/* ========================================================
+   11. ScrollSpy (Active Navigation Link on Scroll)
+======================================================== */
+function initScrollSpy() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links li a[href^="#"]');
+  if (!sections.length || !navLinks.length) return;
+
+  window.addEventListener('scroll', () => {
+    let currentId = '';
+    const scrollPos = window.scrollY + 180;
+
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        currentId = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === `#${currentId}`) {
+        link.classList.add('active-link');
+      } else {
+        link.classList.remove('active-link');
+      }
+    });
+  }, { passive: true });
 }
